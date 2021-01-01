@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VIM on Heru Setiawan</title>
+    <link>https://herusetiawan.id/tags/vim/</link>
+    <description>Recent content in VIM on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 Jan 2018 20:53:23 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Memulai Petualangan Menggunakan Vim (Part 2)</title>
+      <link>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-2/</link>
+      <pubDate>Mon, 15 Jan 2018 20:53:23 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-2/</guid>
+      <description>Halo, kembali lagi bertemu dengan post yang mengupas tentang VIM. Post ini merupakan lanjutan dari Memulai Petualangan Menggunakan VIM (Part 1). Kali ini saya akan bercerita step by step untuk bisa mahir menggunakan VIM. Ya belajar menggunakan VIM memang berat di awal dan butuh banyak waktu. Maka dari itu jangan berharap bisa mahir dalam hitungan hari atau bahkan jam. Perlu latihan berulang-ulang agar jari-jari anda terbiasa dengan perintah di VIM.</description>
+    </item>
+    
+    <item>
+      <title>Memulai Petualangan Menggunakan Vim Part 1</title>
+      <link>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-1/</link>
+      <pubDate>Sun, 10 Dec 2017 10:51:40 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-1/</guid>
+      <description>Yeah, salah satu resolusi terbesar saya di tahun 2017 adalah berhasil menjadikan VIM sebagai text editor utama. Yang jelas butuh perjuangan dan kerja keras untuk mencapai hal tersebut. Waktu yang saya butuhkan untuk benar-benar full menggunakan VIM sektiar 4 bulan. Salah satu hal yang membuat saya perpacu untuk belajar VIM yaitu quote dari sebuah blog dengan judul Learn VIM Progressively.
+ Learn VIM and it will be your last text editor.</description>
+    </item>
+    
+  </channel>
+</rss>

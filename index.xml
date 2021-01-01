@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heru Setiawan</title>
+    <link>https://herusetiawan.id/</link>
+    <description>Recent content on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 01 Jan 2021 08:23:15 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Save Tmux Session</title>
+      <link>https://herusetiawan.id/posts/how-to-save-tmux-session/</link>
+      <pubDate>Fri, 01 Jan 2021 08:23:15 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/how-to-save-tmux-session/</guid>
+      <description>Hi folks,
+When you start using tmux, it will always create a new session. We can say that session is tmux main feature. Session can contains multiple windows and panes. It depend on your needed.
+The interesting thing is you can create multiple tmux sessions. Usually, every session only related to one project. For example you have 2 tmux session. The first is “laravel” session contains 2 panes. First pane is used to open vim editor and the second pane is used to run the laravel app.</description>
+    </item>
+    
+    <item>
+      <title>Konsumsi Data Selama Pembelajaran Jarak Jauh</title>
+      <link>https://herusetiawan.id/posts/konsumsi-data-selama-pembelajaran-jarak-jauh/</link>
+      <pubDate>Fri, 25 Sep 2020 15:09:02 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/konsumsi-data-selama-pembelajaran-jarak-jauh/</guid>
+      <description>Sejak pandemi Covid-19 melanda Indonesia pada Maret 2020, semua jenjang pendidikan mulai menyelenggarakan pembelajaran jarak jauh (PJJ). Kegiatan pembelajaran ini sangat mengandalkan perangkat laptop/komputer, smartphone dan koneksi internet. Media pembelajaran yang digunakan bisa bervariasi mulai dari Whatsapp Group, E-Learning sekolah, Google Classroom, Youtube, Zoom hingga Google Meet. Setiap media pembelajaran tersebut mempunyai tingkat konsumsi data yang berbeda-beda.
+Nah yang menjadi permasalahan adalah orang tua siswa sering mengeluh borosnya paket data saat pembelajaran jarak jauh.</description>
+    </item>
+    
+    <item>
+      <title>Lesson Learned : Membangun RT/RW Net Secara Swadaya</title>
+      <link>https://herusetiawan.id/posts/lesson-learned-membangun-rt-rw-net-secara-swadaya/</link>
+      <pubDate>Mon, 21 Sep 2020 09:06:23 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/lesson-learned-membangun-rt-rw-net-secara-swadaya/</guid>
+      <description>Saat ini kebutuhan akan koneksi internet sangatlah tinggi. Terutama di masa pandemi yang mana segala aktivitas disarankan untuk dilakukan secara online. Beruntung di awal tahun 2020 kawasan rumah saya (re : Beran) telah dijangkau oleh jaringan Indihome.
+Sebelum dijangkau jaringan Indihome, warga Beran telah berlangganan internet di salah satu warga. Warga ini punya tower sehingga bisa mengambil koneksi internet (Indihome) dari tempat lain. Secara harga juga relatif murah, hanya 65ribu/bulan dengan kecepatan 1 Mbps unlimited.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring Jaringan Tanpa the Dude</title>
+      <link>https://herusetiawan.id/posts/monitoring-jaringan-tanpa-the-dude/</link>
+      <pubDate>Sun, 17 May 2020 16:33:07 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/monitoring-jaringan-tanpa-the-dude/</guid>
+      <description>Jika anda pengguna mikrotik pasti sudah tidak asing lagi dengan aplikasi The Dude. Ya aplikasi ini digunakan untuk memonitoring suatu jaringan komputer. The Dude mempunyai banyak fitur, salah satu yang sering digunakan yakni monitoring perangkat yang terhubung ke jaringan. Cara kerjanya ketika suatu perangkat mengalami gangguan (re: down) maka The Dude akan mengirimkan notifikasi. Menariknya The Dude menawarkan berbagai platform untuk notifikasi di antaranya bunyi beep pada mikrotik, flash, email, sms, dan popup.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring Mikrotik Menggunakan Telegram Chatbot</title>
+      <link>https://herusetiawan.id/posts/monitoring-mikrotik-menggunakan-telegram-chatbot/</link>
+      <pubDate>Tue, 12 May 2020 15:38:25 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/monitoring-mikrotik-menggunakan-telegram-chatbot/</guid>
+      <description>Dewasa ini aplikasi chat sangatlah populer. Setiap orang selalu berkomunikasi menggunakan aplikasi chat mulai dari urusan pekerjaan, bisnis ataupun hanya sekedar say hello. Pun aplikasi chat banyak macamnya, mulai dari WhatsApp, Line, Facebook Messenger sampai Telegram. Praktis dan interaktif menjadi alasan di balik kepopuleran aplikasi chat.
+Populernya aplikasi chat menjadi hal yang cukup menarik ketika dibawa ke dalam dunia jaringan. Misalnya seorang admin jaringan yang sehari-hari bekerja untuk memonitor dan menjaga kestabilan sebuah jaringan akan sangat sering melakukan pengecekan jaringan.</description>
+    </item>
+    
+    <item>
+      <title>Memulai Hobi Baru Bersepeda</title>
+      <link>https://herusetiawan.id/posts/memulai-hobi-baru-bersepeda/</link>
+      <pubDate>Tue, 02 Jul 2019 13:12:39 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/memulai-hobi-baru-bersepeda/</guid>
+      <description>Sejak kecil saya tidak punya hobi yang jelas. Ketika ditanya apa hobimu, saya selalu jawab &amp;ldquo;Sepak Bola&amp;rdquo;. Jika dirunut lebih jauh, sepak bola bukanlah hobi yang cocok untuk saya. Saya tidak punya bakat di sana, tidak pernah ikut SSB atau klub bola. Jadi sepak bola hanyalah salah satu permainan yang sangat saya sukai dan hampir dimainkan setiap sore. Jadi jawaban sepak bola sebagai hobi merupakan jawaban latah karena memang saya tidak punya kegiatan selain itu.</description>
+    </item>
+    
+    <item>
+      <title>How to Deal With Laravel Task Scheduling on Heroku</title>
+      <link>https://herusetiawan.id/posts/how-to-deal-with-laravel-task-scheduling-on-heroku/</link>
+      <pubDate>Wed, 05 Dec 2018 20:41:58 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/how-to-deal-with-laravel-task-scheduling-on-heroku/</guid>
+      <description>Three months ago, i was assigned to one of Qiscus product called Qismo. Qismo is an accelerator package as a solution for customers service. It is an integrated service which connects customers to merchants via currently available messaging services in the market such as FB messenger, Line, Telegram and Qiscus widget. This allows a merchant to gather all incoming messages from customers in one place and get back to them in no time.</description>
+    </item>
+    
+    <item>
+      <title>How to Deal With Tmux Session</title>
+      <link>https://herusetiawan.id/posts/how-to-deal-with-tmux-session/</link>
+      <pubDate>Sat, 29 Sep 2018 19:04:46 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/how-to-deal-with-tmux-session/</guid>
+      <description>Hi folks,
+When you start using tmux, a new session will always appear. We can say that a session is tmux main feature. A session can contain multiple windows and panes. It depend on your need.
+The interesting thing is you can create multiple tmux sessions. Usually, every session only related to one project. For example you have 2 tmux sessions. Session “laravel” contains 2 panes. The first pane is used to open vim editor and the second pane is used to run the laravel app.</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Tmux</title>
+      <link>https://herusetiawan.id/posts/an-introduction-to-tmux/</link>
+      <pubDate>Fri, 21 Sep 2018 21:38:29 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/an-introduction-to-tmux/</guid>
+      <description>What is Tmux? Tmux is a terminal multiplexer. It&amp;rsquo;s allow you to open multiple terminal sessions inside a single terminal window and easily switching between them. Tmux also allow you to split terminal into multiple windows. Means, you don&amp;rsquo;t need to open multiple tabs in terminal when you have multiple task. Trust me, tmux is very effective and will save your time!
+Session, Window and Pane When you use tmux, terminal tab is definitely deprecated.</description>
+    </item>
+    
+    <item>
+      <title>Memulai Petualangan Menggunakan Vim (Part 2)</title>
+      <link>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-2/</link>
+      <pubDate>Mon, 15 Jan 2018 20:53:23 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-2/</guid>
+      <description>Halo, kembali lagi bertemu dengan post yang mengupas tentang VIM. Post ini merupakan lanjutan dari Memulai Petualangan Menggunakan VIM (Part 1). Kali ini saya akan bercerita step by step untuk bisa mahir menggunakan VIM. Ya belajar menggunakan VIM memang berat di awal dan butuh banyak waktu. Maka dari itu jangan berharap bisa mahir dalam hitungan hari atau bahkan jam. Perlu latihan berulang-ulang agar jari-jari anda terbiasa dengan perintah di VIM.</description>
+    </item>
+    
+    <item>
+      <title>Capaian 2017 Dan Target 2018</title>
+      <link>https://herusetiawan.id/posts/capaian-2017-dan-target-2018/</link>
+      <pubDate>Sat, 30 Dec 2017 07:25:36 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/capaian-2017-dan-target-2018/</guid>
+      <description>Tak terasa kita telah berada di penghujung 2017. Rasanya begitu cepat melewati 12 bulan di tahun 2017. Lantas target apa saja yang telah berhasil dicapai? Yap pertanyaan seperti itu selalu muncul di setiap akhir tahun. Bagi saya 2017 adalah tahun yang penuh pencapaian baik pencapaian dalam urusan pribadi maupun karir. Yang jelas apapun yang telah kita capai di tahun 2017 patut disyukuri dan kemudian dijadikan refleksi untuk menatap tahun 2018.</description>
+    </item>
+    
+    <item>
+      <title>Manage Your Ruby Version using rbenv</title>
+      <link>https://herusetiawan.id/posts/manage-your-ruby-version-using-rbenv/</link>
+      <pubDate>Mon, 18 Dec 2017 05:38:38 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/manage-your-ruby-version-using-rbenv/</guid>
+      <description>Bisa dikatakan saya mulai mengenal Version Manager sejak menjadi Backend Developer di Qiscus sekitar bulan April 2017. Sejak saat itu saya mulai akrab dan berkutak dengan project-project dengan bahasa pemrograman Ruby atau framework Ruby on Rails pada khususnya. Beberapa project yang saya pegang di Qiscus memiliki requirement versi Ruby yang berbeda-beda.
+Misalnya project A butuh ruby versi x, project B butuh Ruby versi y, dan project C butuh Ruby versi z.</description>
+    </item>
+    
+    <item>
+      <title>Memulai Petualangan Menggunakan Vim Part 1</title>
+      <link>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-1/</link>
+      <pubDate>Sun, 10 Dec 2017 10:51:40 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-1/</guid>
+      <description>Yeah, salah satu resolusi terbesar saya di tahun 2017 adalah berhasil menjadikan VIM sebagai text editor utama. Yang jelas butuh perjuangan dan kerja keras untuk mencapai hal tersebut. Waktu yang saya butuhkan untuk benar-benar full menggunakan VIM sektiar 4 bulan. Salah satu hal yang membuat saya perpacu untuk belajar VIM yaitu quote dari sebuah blog dengan judul Learn VIM Progressively.
+ Learn VIM and it will be your last text editor.</description>
+    </item>
+    
+  </channel>
+</rss>

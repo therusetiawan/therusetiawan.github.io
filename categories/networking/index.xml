@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networking on Heru Setiawan</title>
+    <link>https://herusetiawan.id/categories/networking/</link>
+    <description>Recent content in Networking on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Sep 2020 15:09:02 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/categories/networking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Konsumsi Data Selama Pembelajaran Jarak Jauh</title>
+      <link>https://herusetiawan.id/posts/konsumsi-data-selama-pembelajaran-jarak-jauh/</link>
+      <pubDate>Fri, 25 Sep 2020 15:09:02 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/konsumsi-data-selama-pembelajaran-jarak-jauh/</guid>
+      <description>Sejak pandemi Covid-19 melanda Indonesia pada Maret 2020, semua jenjang pendidikan mulai menyelenggarakan pembelajaran jarak jauh (PJJ). Kegiatan pembelajaran ini sangat mengandalkan perangkat laptop/komputer, smartphone dan koneksi internet. Media pembelajaran yang digunakan bisa bervariasi mulai dari Whatsapp Group, E-Learning sekolah, Google Classroom, Youtube, Zoom hingga Google Meet. Setiap media pembelajaran tersebut mempunyai tingkat konsumsi data yang berbeda-beda.
+Nah yang menjadi permasalahan adalah orang tua siswa sering mengeluh borosnya paket data saat pembelajaran jarak jauh.</description>
+    </item>
+    
+    <item>
+      <title>Lesson Learned : Membangun RT/RW Net Secara Swadaya</title>
+      <link>https://herusetiawan.id/posts/lesson-learned-membangun-rt-rw-net-secara-swadaya/</link>
+      <pubDate>Mon, 21 Sep 2020 09:06:23 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/lesson-learned-membangun-rt-rw-net-secara-swadaya/</guid>
+      <description>Saat ini kebutuhan akan koneksi internet sangatlah tinggi. Terutama di masa pandemi yang mana segala aktivitas disarankan untuk dilakukan secara online. Beruntung di awal tahun 2020 kawasan rumah saya (re : Beran) telah dijangkau oleh jaringan Indihome.
+Sebelum dijangkau jaringan Indihome, warga Beran telah berlangganan internet di salah satu warga. Warga ini punya tower sehingga bisa mengambil koneksi internet (Indihome) dari tempat lain. Secara harga juga relatif murah, hanya 65ribu/bulan dengan kecepatan 1 Mbps unlimited.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring Jaringan Tanpa the Dude</title>
+      <link>https://herusetiawan.id/posts/monitoring-jaringan-tanpa-the-dude/</link>
+      <pubDate>Sun, 17 May 2020 16:33:07 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/monitoring-jaringan-tanpa-the-dude/</guid>
+      <description>Jika anda pengguna mikrotik pasti sudah tidak asing lagi dengan aplikasi The Dude. Ya aplikasi ini digunakan untuk memonitoring suatu jaringan komputer. The Dude mempunyai banyak fitur, salah satu yang sering digunakan yakni monitoring perangkat yang terhubung ke jaringan. Cara kerjanya ketika suatu perangkat mengalami gangguan (re: down) maka The Dude akan mengirimkan notifikasi. Menariknya The Dude menawarkan berbagai platform untuk notifikasi di antaranya bunyi beep pada mikrotik, flash, email, sms, dan popup.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring Mikrotik Menggunakan Telegram Chatbot</title>
+      <link>https://herusetiawan.id/posts/monitoring-mikrotik-menggunakan-telegram-chatbot/</link>
+      <pubDate>Tue, 12 May 2020 15:38:25 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/monitoring-mikrotik-menggunakan-telegram-chatbot/</guid>
+      <description>Dewasa ini aplikasi chat sangatlah populer. Setiap orang selalu berkomunikasi menggunakan aplikasi chat mulai dari urusan pekerjaan, bisnis ataupun hanya sekedar say hello. Pun aplikasi chat banyak macamnya, mulai dari WhatsApp, Line, Facebook Messenger sampai Telegram. Praktis dan interaktif menjadi alasan di balik kepopuleran aplikasi chat.
+Populernya aplikasi chat menjadi hal yang cukup menarik ketika dibawa ke dalam dunia jaringan. Misalnya seorang admin jaringan yang sehari-hari bekerja untuk memonitor dan menjaga kestabilan sebuah jaringan akan sangat sering melakukan pengecekan jaringan.</description>
+    </item>
+    
+  </channel>
+</rss>

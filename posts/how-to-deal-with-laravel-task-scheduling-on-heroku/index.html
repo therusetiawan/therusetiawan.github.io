@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Three months ago, i was assigned to one of Qiscus product called Qismo. Qismo is an accelerator package as a solution for customers service. It is an integrated service which connects customers to merchants via currently available messaging services in the market such as FB messenger, Line, Telegram and Qiscus widget. This allows a merchant to gather all incoming messages from customers in one place and get back to them in no time.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='How to Deal With Laravel Task Scheduling on Heroku • Heru Setiawan'>
+<meta property='og:description' content='Three months ago, i was assigned to one of Qiscus product called Qismo. Qismo is an accelerator package as a solution for customers service. It is an integrated service which connects customers to merchants via currently available messaging services in the market such as FB messenger, Line, Telegram and Qiscus widget. This allows a merchant to gather all incoming messages from customers in one place and get back to them in no time.'>
+<meta property='og:url' content='https://herusetiawan.id/posts/how-to-deal-with-laravel-task-scheduling-on-heroku/'>
+<meta property='og:site_name' content='Heru Setiawan'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Laravel'><meta property='article:tag' content='Heroku'><meta property='article:published_time' content='2018-12-05T20:41:58&#43;07:00'/><meta property='article:modified_time' content='2018-12-05T20:41:58&#43;07:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>How to Deal With Laravel Task Scheduling on Heroku • Heru Setiawan</title>
+  <link rel='canonical' href='https://herusetiawan.id/posts/how-to-deal-with-laravel-task-scheduling-on-heroku/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-178474974-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+<body class='page type-posts has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      Heru Setiawan
+      </a>
+    </h2>
+    <div class='desc'>
+    
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/bluetooth/' style='font-size:1em'>Bluetooth</a>
+      </li><li>
+        <a href='/tags/chatbot/' style='font-size:1.75em'>Chatbot</a>
+      </li><li>
+        <a href='/tags/civil-servant/' style='font-size:1.25em'>Civil Servant</a>
+      </li><li>
+        <a href='/tags/computing/' style='font-size:1em'>Computing</a>
+      </li><li>
+        <a href='/tags/cycling/' style='font-size:1em'>Cycling</a>
+      </li><li>
+        <a href='/tags/e-commerce/' style='font-size:1em'>E-Commerce</a>
+      </li><li>
+        <a href='/tags/habit/' style='font-size:1em'>Habit</a>
+      </li><li>
+        <a href='/tags/heroku/' style='font-size:1em'>Heroku</a>
+      </li><li>
+        <a href='/tags/hobi/' style='font-size:1em'>Hobi</a>
+      </li><li>
+        <a href='/tags/information-technology/' style='font-size:1.25em'>Information Technology</a>
+      </li><li>
+        <a href='/tags/iot/' style='font-size:1em'>IoT</a>
+      </li><li>
+        <a href='/tags/laravel/' style='font-size:1em'>Laravel</a>
+      </li><li>
+        <a href='/tags/master-degree/' style='font-size:1.25em'>Master Degree</a>
+      </li><li>
+        <a href='/tags/mikrotik/' style='font-size:2em'>Mikrotik</a>
+      </li><li>
+        <a href='/tags/pervasive/' style='font-size:1em'>Pervasive</a>
+      </li><li>
+        <a href='/tags/rtrwnet/' style='font-size:1em'>RTRWNet</a>
+      </li><li>
+        <a href='/tags/ruby/' style='font-size:1em'>Ruby</a>
+      </li><li>
+        <a href='/tags/study/' style='font-size:1.25em'>Study</a>
+      </li><li>
+        <a href='/tags/terminal/' style='font-size:2em'>Terminal</a>
+      </li><li>
+        <a href='/tags/the-hook-model/' style='font-size:1em'>The Hook Model</a>
+      </li><li>
+        <a href='/tags/tmux/' style='font-size:1.5em'>Tmux</a>
+      </li><li>
+        <a href='/tags/version-manager/' style='font-size:1em'>Version Manager</a>
+      </li><li>
+        <a href='/tags/vim/' style='font-size:1.25em'>VIM</a>
+      </li><li>
+        <a href='/tags/winbot/' style='font-size:1.75em'>Winbot</a>
+      </li><li>
+        <a href='/tags/wireless/' style='font-size:1em'>Wireless</a>
+      </li><li>
+        <a href='/tags/wpan/' style='font-size:1em'>WPAN</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/categories/tech/'>Tech</a>
+      </li><li class='item'>
+        <a href='/categories/networking/'>Networking</a>
+      </li><li class='item'>
+        <a href='/categories/me/'>Me</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Heru Setiawan</p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>How to Deal With Laravel Task Scheduling on Heroku</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-12-05T20:41:58&#43;07:00'>2018, Dec 05</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+5 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Three months ago, i was assigned to one of <a href="https://qiscus.com/" target="_blank">Qiscus</a> product
+called <a href="https://qismo.qiscus.com/" target="_blank">Qismo</a>. Qismo is an accelerator package as a
+solution for customers service. It is an integrated service which connects
+customers to merchants via currently available messaging services in the market
+such as FB messenger, Line, Telegram and Qiscus widget. This allows a merchant
+to gather all incoming messages from customers in one place and get back to them
+in no time.</p>
+
+<p>As a SaaS (Software as a Service) product, Billing &amp; Payment is an important
+feature. In the other hand, currently Qismo already have so many clients. We
+need to filter who is paid clients and who is free clients. And we want to make
+clients can make a payment via Qismo dashboard based on their plan subscription.
+So, my team plan to ship Billing &amp; Payment feature in the end of October 2018.
+Then we start to gather the requirements with Qiscus Business and Operations
+Team. Here are the list of functionalities that should we build :</p>
+
+<ul>
+<li>Qismo will have list of plans (Starter, Business, Enterprise, Custom)</li>
+<li>Qismo will have monthly and annually subscription type</li>
+<li>Qismo user will have 14 days free trial</li>
+<li>After 14 trial days, free account will be disabled automatically</li>
+<li>Qismo will create an invoice to paid account automatically based on their plan
+(recurring invoices)</li>
+<li>Qismo will send email notifications automatically on some events such as
+disabled free account, new invoice, invoice due date and qismo account monthly
+usage</li>
+<li>Qismo will support bank transfer payment method</li>
+</ul>
+
+<p>Based on the list above, there are some functionalities that should be run
+automatically. For example disable free account, send email notifications and
+create recurring invoices. To develop that features, we choose to use Laravel
+Task Scheduling.</p>
+
+<p>This laravel feature allow you to fluently and expressively define your command
+schedule within Laravel itself. When using the scheduler, only a single Cron
+entry is needed on your server. In the other words, you don’t need to generated
+a Cron entry for each task you needed to schedule. Yes, its so simple and funny.</p>
+
+<p>Let’s focus on Qismo use cases again. Our scenario is Qismo will have several
+background jobs to handle Billing &amp; Payment feature. Here is the background job
+sample.</p>
+
+<pre><code>&lt;?php
+
+    namespace App\Jobs\Payment;
+
+    use Illuminate\Bus\Queueable;
+    use Illuminate\Queue\SerializesModels;
+    use Illuminate\Queue\InteractsWithQueue;
+    use Illuminate\Contracts\Queue\ShouldQueue;
+    use Illuminate\Foundation\Bus\Dispatchable;
+    ........
+
+    class DisableFreeAcountJob implements ShouldQueue
+    {
+        public function __construct()
+        {
+            
+        }
+
+        public function handle()
+        {
+            // Code to disable qismo free account
+
+        }
+
+    }
+</code></pre>
+
+<p>Basically, another background jobs are same with <code>DisabledFreeAcountJob</code> above.
+The main different only on the business logic on each background jobs. All
+background jobs are placed in folder <code>App\Models\Jobs\Payment</code>.</p>
+
+<pre><code>    ├── app
+    │   ├── Console
+    │   ├── Exceptions
+    │   ├── Http
+    │   ├── Jobs
+            ├── Payment
+            │   │   ├── DisabledFreeAcountJob.php
+            │   │   ├── CreateRecurringInvoicesJob.php
+            │   │   ├── SendEmailNotificationsJob.php
+    │   ├── Mail
+    │   ├── Models
+    │   ├── Modules
+    │   ├── Providers
+    │   ├── Scopes
+    ├── bootstrap
+    ├── config
+    ├── routes
+    ├── ..............
+</code></pre>
+
+<p>Then we want to run all payment background jobs daily. It’s very simple. We just
+need to add all scheduled tasks in the <code>schedule</code> method of the
+<code>App\Console\Kernel.php</code>. Here is the details.</p>
+
+<pre><code>&lt;?php
+
+namespace App\Console;
+
+use DB;
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+
+class Kernel extends ConsoleKernel
+{
+    .....................
+protected function schedule(Schedule $schedule)
+    {
+        $schedule-&gt;job(new \App\Jobs\Payment\DisableFreeAcountJob())-&gt;dailyAt('01:00');
+        $schedule-&gt;job(new \App\Jobs\Payment\CreateRecurringInvoicesJob())-&gt;dailyAt('01:00');
+        $schedule-&gt;job(new \App\Jobs\Payment\SendEmailNotificationsJob())-&gt;dailyAt('01:00');
+   }
+}
+</code></pre>
+
+<p>Now we can run all background jobs above only using one command. The command is
+<code>php artisan schedule:run</code>. Next step is we need to add Heroku plugin called
+<code>Heroku Scheduler</code>. This plugin will execute <code>php artisan schedule:run</code> command
+periodically and allows you to configure jobs to run every 10 minutes, every
+hour, or every day, at a specified time.</p>
+
+<p>For Qismo use case, we choose to exucute <code>php artisan schedule:run</code> daily every
+01:00 UTC. From the image below, we can monitor what is the next due and what is
+the last run.</p>
+
+<p><img src="/img/heroku-scheduler-1.png" alt="Heroku Scheduler" /></p>
+
+<h4 id="the-problem">The problem</h4>
+
+<p>But the reality, next due is not accurate. Sometime next due execution is late.
+This condition will affected to all payment background jobs that never be
+executed. To be honest, i was struggling with this issue around 2 days.</p>
+
+<p><img src="/img/heroku-scheduler-2.png" alt="Heroku Scheduler" /></p>
+
+<h4 id="so-what-is-the-solution"><strong>So what is the solution?</strong></h4>
+
+<p>In order to handle the problem above, we need to do extra codes. There are 3
+steps : create crons table, create the model and run the task based on a truth
+tests.</p>
+
+<p><strong>1 — Create migration to create crons table</strong></p>
+
+<p>Crons table have 3 columns. First, command column is used to store background
+job name that will be executed. Next_run &amp; last_run column is same with next_due
+and last_run on <code>Heroku Scheduler</code> configuration. Command column is a primary
+key, so the value must be unique. It’s to prevent command duplication.</p>
+
+<pre><code>&lt;?php
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+use Carbon\Carbon;
+class CreateCronsTable extends Migration
+{
+
+    public function up()
+    {
+        Schema::create('crons', function (Blueprint $table) {
+            $table-&gt;string('command');
+            $table-&gt;datetime('next_run');
+            $table-&gt;datetime('last_run');
+            $table-&gt;timestamps();
+            $table-&gt;primary('command');
+        });
+    }
+    public function down()
+    {
+        Schema::dropIfExists('crons');
+    }
+}
+</code></pre>
+
+<p>After run the migration to create crons table above, don’t forget to insert list of payment background jobs manually. So, crons table contains 3 records.</p>
+
+<p><img src="/img/list-of-jobs.png" alt="List of Jobs" /></p>
+
+<p><strong>2 — Create the model</strong></p>
+
+<pre><code>&lt;?php
+
+    namespace App\Models;
+
+    use Illuminate\Database\Eloquent\Model;
+    use Carbon\Carbon;
+
+    class Cron extends Model
+    {
+        protected $primaryKey = 'command';
+
+        protected $fillable = ['command', 'next_run', 'last_run'];
+
+        public static function shouldRun($command, $days) {
+            $cron = Cron::find($command);
+            $now  = Carbon::now();
+
+           if ( empty($cron) ||
+                date('Y-m-d H:i', strtotime($cron-&gt;next_run)) &gt; date('Y-m-d H:i', strtotime($now))
+            ) {
+                return false;
+            }
+
+           $cron-&gt;next_run = Carbon::parse($cron-&gt;next_run)-&gt;addDays($days);
+            $cron-&gt;last_run = Carbon::now();
+            $cron-&gt;save();
+
+            return true;
+        }
+    }
+</code></pre>
+
+<p>Cron model only contain one static function to check a command should be run or not. A command should be run if command is found in database and the next run is less than the current time.</p>
+
+<p><strong>3 — Run scheduler based on the truth tests</strong></p>
+
+<pre><code>$schedule-&gt;job(new JOBNAME())-&gt;everyMinute()-&gt;when(function() {
+          return Cron::shouldRun('JOBNAME()', 1);
+    });
+</code></pre>
+
+<p>Update laravel task scheduling configuration in <code>App\Console\Kernel.php</code> using
+the truth tests above. Please replace JOBNAME() with three payment background
+jobs name.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/tech/'>Tech</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/laravel/'>Laravel</a>, <a class='tag' href='/tags/heroku/'>Heroku</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/posts/how-to-deal-with-tmux-session/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>How to Deal With Tmux Session</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/posts/memulai-hobi-baru-bersepeda/'>
+        <span class='screen-reader-text'>Next post: </span>Memulai Hobi Baru Bersepeda<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "herusetiawan-id" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/herusetiawan.id' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:me.herusetiawan@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://t.me/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Telegram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="m 22.05,1.577 c -0.393,-0.016 -0.784,0.08 -1.117,0.235 -0.484,0.186 -4.92,1.902 -9.41,3.64 C 9.263,6.325 7.005,7.198 5.267,7.867 3.53,8.537 2.222,9.035 2.153,9.059 c -0.46,0.16 -1.082,0.362 -1.61,0.984 -0.79581202,1.058365 0.21077405,1.964825 1.004,2.499 1.76,0.564 3.58,1.102 5.087,1.608 0.556,1.96 1.09,3.927 1.618,5.89 0.174,0.394 0.553,0.54 0.944,0.544 l -0.002,0.02 c 0,0 0.307,0.03 0.606,-0.042 0.3,-0.07 0.677,-0.244 1.02,-0.565 0.377,-0.354 1.4,-1.36 1.98,-1.928 l 4.37,3.226 0.035,0.02 c 0,0 0.484,0.34 1.192,0.388 0.354,0.024 0.82,-0.044 1.22,-0.337 0.403,-0.294 0.67,-0.767 0.795,-1.307 0.374,-1.63 2.853,-13.427 3.276,-15.38 L 23.676,4.725 C 23.972,3.625 23.863,2.617 23.18,2.02 22.838,1.723 22.444,1.593 22.05,1.576 Z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.youtube.com/channel/UCz2kPuasq463KQZrAZclKMw' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Youtube account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2024 Heru Setiawan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

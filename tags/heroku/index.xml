@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heroku on Heru Setiawan</title>
+    <link>https://herusetiawan.id/tags/heroku/</link>
+    <description>Recent content in Heroku on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Dec 2018 20:41:58 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Deal With Laravel Task Scheduling on Heroku</title>
+      <link>https://herusetiawan.id/posts/how-to-deal-with-laravel-task-scheduling-on-heroku/</link>
+      <pubDate>Wed, 05 Dec 2018 20:41:58 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/how-to-deal-with-laravel-task-scheduling-on-heroku/</guid>
+      <description>Three months ago, i was assigned to one of Qiscus product called Qismo. Qismo is an accelerator package as a solution for customers service. It is an integrated service which connects customers to merchants via currently available messaging services in the market such as FB messenger, Line, Telegram and Qiscus widget. This allows a merchant to gather all incoming messages from customers in one place and get back to them in no time.</description>
+    </item>
+    
+  </channel>
+</rss>

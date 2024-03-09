@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Halo, kembali lagi bertemu dengan post yang mengupas tentang VIM. Post ini merupakan lanjutan dari Memulai Petualangan Menggunakan VIM (Part 1). Kali ini saya akan bercerita step by step untuk bisa mahir menggunakan VIM. Ya belajar menggunakan VIM memang berat di awal dan butuh banyak waktu. Maka dari itu jangan berharap bisa mahir dalam hitungan hari atau bahkan jam. Perlu latihan berulang-ulang agar jari-jari anda terbiasa dengan perintah di VIM.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Memulai Petualangan Menggunakan Vim (Part 2) • Heru Setiawan'>
+<meta property='og:description' content='Halo, kembali lagi bertemu dengan post yang mengupas tentang VIM. Post ini merupakan lanjutan dari Memulai Petualangan Menggunakan VIM (Part 1). Kali ini saya akan bercerita step by step untuk bisa mahir menggunakan VIM. Ya belajar menggunakan VIM memang berat di awal dan butuh banyak waktu. Maka dari itu jangan berharap bisa mahir dalam hitungan hari atau bahkan jam. Perlu latihan berulang-ulang agar jari-jari anda terbiasa dengan perintah di VIM.'>
+<meta property='og:url' content='https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-2/'>
+<meta property='og:site_name' content='Heru Setiawan'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Terminal'><meta property='article:tag' content='VIM'><meta property='article:published_time' content='2018-01-15T20:53:23&#43;07:00'/><meta property='article:modified_time' content='2018-01-15T20:53:23&#43;07:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>Memulai Petualangan Menggunakan Vim (Part 2) • Heru Setiawan</title>
+  <link rel='canonical' href='https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-2/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-178474974-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+<body class='page type-posts has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      Heru Setiawan
+      </a>
+    </h2>
+    <div class='desc'>
+    
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/bluetooth/' style='font-size:1em'>Bluetooth</a>
+      </li><li>
+        <a href='/tags/chatbot/' style='font-size:1.75em'>Chatbot</a>
+      </li><li>
+        <a href='/tags/civil-servant/' style='font-size:1.25em'>Civil Servant</a>
+      </li><li>
+        <a href='/tags/computing/' style='font-size:1em'>Computing</a>
+      </li><li>
+        <a href='/tags/cycling/' style='font-size:1em'>Cycling</a>
+      </li><li>
+        <a href='/tags/e-commerce/' style='font-size:1em'>E-Commerce</a>
+      </li><li>
+        <a href='/tags/habit/' style='font-size:1em'>Habit</a>
+      </li><li>
+        <a href='/tags/heroku/' style='font-size:1em'>Heroku</a>
+      </li><li>
+        <a href='/tags/hobi/' style='font-size:1em'>Hobi</a>
+      </li><li>
+        <a href='/tags/information-technology/' style='font-size:1.25em'>Information Technology</a>
+      </li><li>
+        <a href='/tags/iot/' style='font-size:1em'>IoT</a>
+      </li><li>
+        <a href='/tags/laravel/' style='font-size:1em'>Laravel</a>
+      </li><li>
+        <a href='/tags/master-degree/' style='font-size:1.25em'>Master Degree</a>
+      </li><li>
+        <a href='/tags/mikrotik/' style='font-size:2em'>Mikrotik</a>
+      </li><li>
+        <a href='/tags/pervasive/' style='font-size:1em'>Pervasive</a>
+      </li><li>
+        <a href='/tags/rtrwnet/' style='font-size:1em'>RTRWNet</a>
+      </li><li>
+        <a href='/tags/ruby/' style='font-size:1em'>Ruby</a>
+      </li><li>
+        <a href='/tags/study/' style='font-size:1.25em'>Study</a>
+      </li><li>
+        <a href='/tags/terminal/' style='font-size:2em'>Terminal</a>
+      </li><li>
+        <a href='/tags/the-hook-model/' style='font-size:1em'>The Hook Model</a>
+      </li><li>
+        <a href='/tags/tmux/' style='font-size:1.5em'>Tmux</a>
+      </li><li>
+        <a href='/tags/version-manager/' style='font-size:1em'>Version Manager</a>
+      </li><li>
+        <a href='/tags/vim/' style='font-size:1.25em'>VIM</a>
+      </li><li>
+        <a href='/tags/winbot/' style='font-size:1.75em'>Winbot</a>
+      </li><li>
+        <a href='/tags/wireless/' style='font-size:1em'>Wireless</a>
+      </li><li>
+        <a href='/tags/wpan/' style='font-size:1em'>WPAN</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/categories/tech/'>Tech</a>
+      </li><li class='item'>
+        <a href='/categories/networking/'>Networking</a>
+      </li><li class='item'>
+        <a href='/categories/me/'>Me</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Heru Setiawan</p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Memulai Petualangan Menggunakan Vim (Part 2)</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-01-15T20:53:23&#43;07:00'>2018, Jan 15</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+5 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Halo, kembali lagi bertemu dengan post yang mengupas tentang <code>VIM</code>.
+Post ini merupakan lanjutan dari <code>Memulai Petualangan Menggunakan VIM (Part 1)</code>.
+Kali ini saya akan bercerita step by step untuk bisa mahir menggunakan VIM. Ya belajar
+menggunakan VIM memang berat di awal dan butuh banyak waktu. Maka dari itu jangan berharap
+bisa mahir dalam hitungan hari atau bahkan jam. Perlu latihan berulang-ulang agar
+jari-jari anda terbiasa dengan perintah di VIM. Kesulitan-kesulitan saat belajar
+VIM akan terbayarkan saat anda sudah mahir menggunakannya. So, jangan takut
+mencoba karena perjuanganmu tidak akan sia-sia.</p>
+
+<p><img src="/img/vim-learn-curve.jpg" alt="VIM Learning Curve" />
+Sumber : <a href="https://canvas.bham.ac.uk/courses/17216/pages/introduction-to-vim" target="_blank">https://canvas.bham.ac.uk/courses/17216/pages/introduction-to-vim</a></p>
+
+<h5 id="mengenal-mode-di-vim">Mengenal mode di VIM</h5>
+
+<p>Di VIM ada 3 mode yang bakal sering digunakan yaitu <code>normal</code>, <code>insert</code> dan <code>visual</code>.
+Ini sangat berbeda dengan kebanyakan text editor.
+Di text editor lain anda tinggal mengetik sesuatu di keyboard dan dapat langsung
+melihat perubahannya di layar. Nah untuk dapat mengetikkan sesuatu di VIM anda harus masuk
+ke mode <code>insert</code> terlebih dahulu dengan menekan <code>i</code>. Kemudian tekan <code>esc</code>
+untuk kembali ke mode normal. Secara default saat masuk ke VIM maka akan menggunakan mode
+<code>normal</code>. Di VIM kita akan lebih banyak berinteraksi dengan mode <code>normal</code>.</p>
+
+<pre><code>- i = masuk ke mode insert
+- esc = kembali ke mode normal
+- v = masuk ke mode visual
+</code></pre>
+
+<h5 id="menyimpan-file-di-vim">Menyimpan file di VIM</h5>
+
+<p>Setelah mengenal mode dan dapat mengetikkan sesuatu di VIM, maka langkah selanjutnya harus
+tahu bagaimana cara menyimpan file. Untuk dapat menyimpan file maka harus masuk ke normal
+terlebih dahulu ( tekan <code>esc</code>). Kemudian ketikkan perintah <code>:w</code> dan tekan enter. Untuk
+menyimpan file sekaligus memberi nama file maka perintahnya <code>:w nama_file.txt</code>.</p>
+
+<pre><code>- :w = menyimpan file
+- :wq = menyimpan file dan keluar dari VIM
+- :q! = keluar dari VIM tanpa menyimpan file
+</code></pre>
+
+<h5 id="navigasi-dasar-vim">Navigasi Dasar VIM</h5>
+
+<p>VIM tidak merekomendasikan penggunanya memindahkan kursor menggunakan navigasi arah panah
+(arrow) di keyboard. Navigasi tersebut diganti menggunakan <code>hjkl</code>. Alasannya karena letak
+arrow terlalu jauh sehingga tidak efisien. Dengan menggunakan <code>hjkl</code> harapannya posisi
+jari tetap stay di keyboard dengan posisi yang konsisten (posisi 10 jari). Yang jelas
+perlu pembiasaan untuk dapat menggunakan navigasi <code>hjkl</code>. Menariknya <code>hjkl</code> bisa
+dikombinasikan dengan angka. Misal kita ingin berpindah 10 baris ke bawah, nah cukup
+menggunakan <code>10j</code>. Hal ini juga berlaku untuk berpindah ke atas, kiri dan kanan.</p>
+
+<pre><code>- h = berpindah ke kiri
+- j = berpindah ke bawah
+- k = berpindah ke atas
+- l = berpiindah ke kanan
+</code></pre>
+
+<h5 id="navigasi-antar-kata">Navigasi Antar Kata</h5>
+
+<p>Banyak pilihan navigasi di VIM atau dengan kata lain <code>hjkl</code> bukan satu-satunya navigasi.
+VIM menawarkan navigasi antar kata atau bahkan antar baris. Misalnya dengan menekan
+<code>w</code> maka akan berpindah ke kata selanjutnya. Ini dapat menghemat daripada kita harus
+menggunakan <code>l</code> (berpindah ke kanan) sebanyak n kali. Yang lebih menarik untuk berpindah ke 5 kata
+selanjutnya cukup menggunakan <code>5w</code>. Selain itu ada juga <code>b</code> untuk berpindah ke kata
+sebelumnya.</p>
+
+<pre><code>- w = berpindah ke kata selanjutnya
+- e = berpindah ke kata selanjutnya dan posisi kursor berada di akhir kata
+- b = berpindah ke kata sebelumnya
+- ^ = berpindah ke awal baris
+- $ =  berpindah ke akhir baris
+- gg = berpindah ke baris paling atas
+- G =  berpindah ke baris paling bawah
+- 10G = berpindah ke baris nomor 10
+</code></pre>
+
+<h5 id="delete-copy-cut-dan-paste">Delete, Copy, Cut dan Paste</h5>
+
+<p>Sama seperti text editor lain, untuk menghapus sesuatu di VIM bisa menggunakan backspace
+atau delete. Namun cara ini tidak efektif karena kita harus masuk ke mode <code>insert</code>
+terlebih dahulu. Nah ada cara yang lebih efektif yaitu menggunakan <code>x</code> di mode <code>normal</code>.
+Untuk menghapus 5 karater sekaligus bisa menggunakan <code>5x</code> atau untuk menghapus satu
+kata bisa menggunakan <code>dw</code>. Operasi hapus juga bisa dikombinasikan dengan angka misal
+ingin menghapus 5 kata sekaligus menggunakan <code>5dw</code>.</p>
+
+<p>Tentu kita sudah sangat akrab dengan shourtcul Ctrl + c dan Ctrl + v untuk melakukan copy dan
+paste. Nah di vim ada sedikit perbedaan. Operasi copy dan paste sebaiknya
+dilakukan di mode <code>normal</code>. Misalnya untuk meng-copy satu baris sekaligus bisa menggunakan
+<code>yy</code> kemudian tekan <code>p</code> untuk melakukan paste. Atau tekan <code>wp</code> untuk meng-copy satu kata.
+Yang menarik, di VIM tidak ada operasi khusus cut. Kita cukup mendelete suatu kata misal
+<code>dw</code> kemudian cukup tekan <code>p</code> untuk  mem-paste. Ini yang disebut dengan paste di VIM.</p>
+
+<pre><code>- x = menghapus satu karakter
+- dd = menghapus satu baris sekaligus
+- yy = meng-copy satu baris sekaligus
+- p = melakukan pasti di bawah kursor
+- P = melaukan paste di atas kursor
+- 3dw = menghapus 3 kata sekaligus
+- 5dj = menghapus 5 baris sekaligus
+- cw = menghapus satu kata kemudian masuk ke mode insert
+- cc = menghapus satu baris kemudian masuk ke mode insert
+- D = menghapus sampai akhir baris
+- C = menghapus sampai akhir baris kemudian masuk ke mode insert
+</code></pre>
+
+<h6 id="blok-tulisan">Blok tulisan</h6>
+
+<p>Untuk melakukan blok tulisan di VIM kita harus masuk ke mode visual terlebih dahulu.
+Ada 2 cara yaitu menggunakan <code>v</code> atau <code>V</code>. Untuk memblok baris demi baris direkomendasikan
+menggunakan <code>V</code>. Namun jika hanya ingin memblok beberapa karater saja menggunakan <code>v</code>.
+Setelah tulisan berhasil diblok, maka kita bisa melakukan operasi lanjutan. Misalnya jika
+ingin menghapus bisa menekan <code>d</code> atau jika ingin mengcopy dengn menekan <code>y</code> diikuti <code>p</code>.</p>
+
+<pre><code>- v = memblok karakter demi karakter
+- V = memblok baris demi baris
+</code></pre>
+
+<h5 id="searching-di-vim">Searching di VIM</h5>
+
+<p>VIM menawarkan 2 cara untuk melakukan pencarian, yaitu forward dan backward search.
+Di text editor lain, pencarian sangat akrab dengan shortcut Ctrl + f. Di VIM pencarian
+menggunakan <code>/kata_yang_mau_dicari</code> kemudian tekan enter. Jika ingin mengetahui hasil
+pencarian lain yang cocok bisa menggunakan <code>n</code> atau <code>N</code>. <code>n</code> untuk mencari kata selanjutnya
+dan <code>N</code> untuk mencari kata sebelumnya.</p>
+
+<pre><code>- /pencarian = forward search
+- ?inijugapencarian = backward search
+</code></pre>
+
+<h5 id="tips-membiasakan-perintah-vim">Tips Membiasakan Perintah VIM</h5>
+
+<p>Dengan banyaknya perintah di VIM tentunya mustahil untuk dapat mengingat dalam waktu
+singkat. Salah satu cara untuk membiasakan perintah VIM yaitu menerapkannya di browser.
+Dengan menggunakan <a href="https://chrome.google.com/webstore/detail/vimium/" target="_blank">Vimium</a>, kita bisa
+menggunakan navigasi <code>hjkl</code> pada browser Google Chrome. Berikut beberapa perintah yang
+bisa digunakan di Vimium:
+<img src="/img/vimium-help.png" alt="Vimium Help" /></p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/tech/'>Tech</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/terminal/'>Terminal</a>, <a class='tag' href='/tags/vim/'>VIM</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/posts/capaian-2017-dan-target-2018/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Capaian 2017 Dan Target 2018</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/posts/an-introduction-to-tmux/'>
+        <span class='screen-reader-text'>Next post: </span>An Introduction to Tmux<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "herusetiawan-id" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/herusetiawan.id' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:me.herusetiawan@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://t.me/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Telegram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="m 22.05,1.577 c -0.393,-0.016 -0.784,0.08 -1.117,0.235 -0.484,0.186 -4.92,1.902 -9.41,3.64 C 9.263,6.325 7.005,7.198 5.267,7.867 3.53,8.537 2.222,9.035 2.153,9.059 c -0.46,0.16 -1.082,0.362 -1.61,0.984 -0.79581202,1.058365 0.21077405,1.964825 1.004,2.499 1.76,0.564 3.58,1.102 5.087,1.608 0.556,1.96 1.09,3.927 1.618,5.89 0.174,0.394 0.553,0.54 0.944,0.544 l -0.002,0.02 c 0,0 0.307,0.03 0.606,-0.042 0.3,-0.07 0.677,-0.244 1.02,-0.565 0.377,-0.354 1.4,-1.36 1.98,-1.928 l 4.37,3.226 0.035,0.02 c 0,0 0.484,0.34 1.192,0.388 0.354,0.024 0.82,-0.044 1.22,-0.337 0.403,-0.294 0.67,-0.767 0.795,-1.307 0.374,-1.63 2.853,-13.427 3.276,-15.38 L 23.676,4.725 C 23.972,3.625 23.863,2.617 23.18,2.02 22.838,1.723 22.444,1.593 22.05,1.576 Z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.youtube.com/channel/UCz2kPuasq463KQZrAZclKMw' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Youtube account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2024 Heru Setiawan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Heru Setiawan</title>
+    <link>https://herusetiawan.id/tags/ruby/</link>
+    <description>Recent content in Ruby on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Dec 2017 05:38:38 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Manage Your Ruby Version using rbenv</title>
+      <link>https://herusetiawan.id/posts/manage-your-ruby-version-using-rbenv/</link>
+      <pubDate>Mon, 18 Dec 2017 05:38:38 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/manage-your-ruby-version-using-rbenv/</guid>
+      <description>Bisa dikatakan saya mulai mengenal Version Manager sejak menjadi Backend Developer di Qiscus sekitar bulan April 2017. Sejak saat itu saya mulai akrab dan berkutak dengan project-project dengan bahasa pemrograman Ruby atau framework Ruby on Rails pada khususnya. Beberapa project yang saya pegang di Qiscus memiliki requirement versi Ruby yang berbeda-beda.
+Misalnya project A butuh ruby versi x, project B butuh Ruby versi y, dan project C butuh Ruby versi z.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computing on Heru Setiawan</title>
+    <link>https://herusetiawan.id/tags/computing/</link>
+    <description>Recent content in Computing on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 05 May 2022 15:16:24 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/tags/computing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pervasive Computing : Cikal Bakal Teknologi Internet of Things</title>
+      <link>https://herusetiawan.id/posts/pervasive-computing-cikal-bakal-teknologi-internet-of-things/</link>
+      <pubDate>Thu, 05 May 2022 15:16:24 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/pervasive-computing-cikal-bakal-teknologi-internet-of-things/</guid>
+      <description>Internet of Things (IoT) berawal dari ide brilian dari seorang peneliti yang menuangkan ideanya ke dalam paper dengan judul The Computer for the 21st Century. Paper tersebut ditulis oleh Mark Weiser selaku kepala Computer Science Laboratory di Xerox Palo Alto Research Center (PARC). Ide dari Mark Weiser adalah bagaimana perangkat-perangkat dapat saling terhubung baik menggunakan media kabel, wireless maupun infrared sehingga dapat memudahkan aktivitas manusia tanpa manusia menyadari keberadaan perangkat-perangkat tersebut.</description>
+    </item>
+    
+  </channel>
+</rss>

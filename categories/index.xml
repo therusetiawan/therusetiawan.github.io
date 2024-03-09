@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Heru Setiawan</title>
+    <link>https://herusetiawan.id/categories/</link>
+    <description>Recent content in Categories on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Nov 2023 10:15:13 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Me</title>
+      <link>https://herusetiawan.id/categories/me/</link>
+      <pubDate>Tue, 28 Nov 2023 10:15:13 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/categories/me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech</title>
+      <link>https://herusetiawan.id/categories/tech/</link>
+      <pubDate>Thu, 05 May 2022 15:16:24 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/categories/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://herusetiawan.id/categories/networking/</link>
+      <pubDate>Wed, 21 Jul 2021 20:38:32 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/categories/networking/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

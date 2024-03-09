@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Saat ini kebutuhan akan koneksi internet sangatlah tinggi. Terutama di masa pandemi yang mana segala aktivitas disarankan untuk dilakukan secara online. Beruntung di awal tahun 2020 kawasan rumah saya (re : Beran) telah dijangkau oleh jaringan Indihome.
+Sebelum dijangkau jaringan Indihome, warga Beran telah berlangganan internet di salah satu warga. Warga ini punya tower sehingga bisa mengambil koneksi internet (Indihome) dari tempat lain. Secara harga juga relatif murah, hanya 65ribu/bulan dengan kecepatan 1 Mbps unlimited.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Lesson Learned : Membangun RT/RW Net Secara Swadaya • Heru Setiawan'>
+<meta property='og:description' content='Saat ini kebutuhan akan koneksi internet sangatlah tinggi. Terutama di masa pandemi yang mana segala aktivitas disarankan untuk dilakukan secara online. Beruntung di awal tahun 2020 kawasan rumah saya (re : Beran) telah dijangkau oleh jaringan Indihome.
+Sebelum dijangkau jaringan Indihome, warga Beran telah berlangganan internet di salah satu warga. Warga ini punya tower sehingga bisa mengambil koneksi internet (Indihome) dari tempat lain. Secara harga juga relatif murah, hanya 65ribu/bulan dengan kecepatan 1 Mbps unlimited.'>
+<meta property='og:url' content='https://herusetiawan.id/posts/lesson-learned-membangun-rt-rw-net-secara-swadaya/'>
+<meta property='og:site_name' content='Heru Setiawan'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='Mikrotik'><meta property='article:tag' content='RTRWNet'><meta property='article:published_time' content='2020-09-21T09:06:23&#43;07:00'/><meta property='article:modified_time' content='2020-09-21T09:06:23&#43;07:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>Lesson Learned : Membangun RT/RW Net Secara Swadaya • Heru Setiawan</title>
+  <link rel='canonical' href='https://herusetiawan.id/posts/lesson-learned-membangun-rt-rw-net-secara-swadaya/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-178474974-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+<body class='page type-posts has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      Heru Setiawan
+      </a>
+    </h2>
+    <div class='desc'>
+    
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/bluetooth/' style='font-size:1em'>Bluetooth</a>
+      </li><li>
+        <a href='/tags/chatbot/' style='font-size:1.75em'>Chatbot</a>
+      </li><li>
+        <a href='/tags/civil-servant/' style='font-size:1.25em'>Civil Servant</a>
+      </li><li>
+        <a href='/tags/computing/' style='font-size:1em'>Computing</a>
+      </li><li>
+        <a href='/tags/cycling/' style='font-size:1em'>Cycling</a>
+      </li><li>
+        <a href='/tags/e-commerce/' style='font-size:1em'>E-Commerce</a>
+      </li><li>
+        <a href='/tags/habit/' style='font-size:1em'>Habit</a>
+      </li><li>
+        <a href='/tags/heroku/' style='font-size:1em'>Heroku</a>
+      </li><li>
+        <a href='/tags/hobi/' style='font-size:1em'>Hobi</a>
+      </li><li>
+        <a href='/tags/information-technology/' style='font-size:1.25em'>Information Technology</a>
+      </li><li>
+        <a href='/tags/iot/' style='font-size:1em'>IoT</a>
+      </li><li>
+        <a href='/tags/laravel/' style='font-size:1em'>Laravel</a>
+      </li><li>
+        <a href='/tags/master-degree/' style='font-size:1.25em'>Master Degree</a>
+      </li><li>
+        <a href='/tags/mikrotik/' style='font-size:2em'>Mikrotik</a>
+      </li><li>
+        <a href='/tags/pervasive/' style='font-size:1em'>Pervasive</a>
+      </li><li>
+        <a href='/tags/rtrwnet/' style='font-size:1em'>RTRWNet</a>
+      </li><li>
+        <a href='/tags/ruby/' style='font-size:1em'>Ruby</a>
+      </li><li>
+        <a href='/tags/study/' style='font-size:1.25em'>Study</a>
+      </li><li>
+        <a href='/tags/terminal/' style='font-size:2em'>Terminal</a>
+      </li><li>
+        <a href='/tags/the-hook-model/' style='font-size:1em'>The Hook Model</a>
+      </li><li>
+        <a href='/tags/tmux/' style='font-size:1.5em'>Tmux</a>
+      </li><li>
+        <a href='/tags/version-manager/' style='font-size:1em'>Version Manager</a>
+      </li><li>
+        <a href='/tags/vim/' style='font-size:1.25em'>VIM</a>
+      </li><li>
+        <a href='/tags/winbot/' style='font-size:1.75em'>Winbot</a>
+      </li><li>
+        <a href='/tags/wireless/' style='font-size:1em'>Wireless</a>
+      </li><li>
+        <a href='/tags/wpan/' style='font-size:1em'>WPAN</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/categories/tech/'>Tech</a>
+      </li><li class='item'>
+        <a href='/categories/networking/'>Networking</a>
+      </li><li class='item'>
+        <a href='/categories/me/'>Me</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Heru Setiawan</p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Lesson Learned : Membangun RT/RW Net Secara Swadaya</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2020-09-21T09:06:23&#43;07:00'>2020, Sep 21</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+7 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Saat ini kebutuhan akan koneksi internet sangatlah tinggi. Terutama di masa pandemi yang
+mana segala aktivitas disarankan untuk dilakukan secara online. Beruntung di awal tahun
+2020 kawasan rumah saya <em>(re : Beran)</em> telah dijangkau oleh jaringan Indihome.</p>
+
+<p>Sebelum dijangkau jaringan Indihome, warga Beran telah berlangganan internet di
+salah satu warga. Warga ini punya tower sehingga bisa mengambil koneksi internet
+(Indihome) dari tempat lain. Secara harga juga relatif murah, hanya 65ribu/bulan dengan
+kecepatan 1 Mbps unlimited. Sistemnya dari satu rumah ke rumah lain dikoneksikan dengan
+kabel UTP. Total ada 15 rumah di Beran yang berlangganan internet dari warga di atas.</p>
+
+<p>Kemudian ada suatu moment di mana, warga penyedia RT/RW Net di atas memiliki kendala
+sehingga tidak bisa menyediakan internet. Di sisi lain jangkauan jaringan Indihome makin
+luas sehingga bisa menjangkau kawasan Beran.</p>
+
+<p>Hasil dari diskusi pemuda Beran memutuskan untuk membangun jaringan RT/RW Net secara
+swadaya dengan memanfaatkan jaringan yang telah ada (hasil dari berlangganan RT/RW Net di
+atas).
+Alasannya jika setiap rumah
+berlangganan Indihome secara mandiri maka biayanya akan mahal <em>(300rb/bulan)</em>. Dan juga
+kecepatan 10 Mbps untuk satu rumah tergolong mubazir.</p>
+
+<h5 id="rancangan-jaringan">Rancangan Jaringan</h5>
+
+<p>Sebelum merancang jaringan, pemuda Beran mengumumkan kepada semua warga bahwa akan membuat
+jaringan RT/RW Net yang sifatnya swadaya dan non profit. Hasil dari pendataan ada 28 rumah
+yang akan ikut berlangganan internet ini.</p>
+
+<p>Skenarionya akan berlangganan Indihome dengan kecepatan 100 Mbps yang mana setiap rumah
+mendapatkan kecepatan 5 Mbps. Untuk iuran per bulan disepakati 65 ribu. Khusus untuk rumah
+yang baru berlangganan internet maka perlu mengeluarkan biaya ekstra. Rinciannya akan
+dibahas pada bagian <em>kebutuhan dana.</em></p>
+
+<p>Untuk kemudahan penggunaan maka dibuat sistem hotspot di mana setiap rumah
+mendapatkan jatah 10 device. Harapannya dimanapun lokasinya, asal masih terhubung ke
+jaringan Beran maka tidak perlu login ke router. Hal ini sangat bermanfaat ketika ada
+kumpulan/pengajian di suatu rumah, hp bisa terhubung ke internet tanpa perlu bertanya
+password :) Juga untuk penghitungan penggunaan kuota pada
+masing-masing rumah.</p>
+
+<h5 id="kebutuhan-alat">Kebutuhan Alat</h5>
+
+<p>Kebutuhan alat ini bisa dibagi menjadi 2 kategori, pertama alat di titik pusat sebagai
+pembagi kecepatan dan kedua alat yang berada di setiap rumah.</p>
+
+<p>Alat yang berada di titik pusat menggunakan <strong>MikroTik RB450gx4</strong> yang mana koneksi
+internet dari router Indihome akan dimasukkan ke Mikrotik. Pada Mikrotik ada beberapa hal
+yang perlu dikonfigurasi yaitu :</p>
+
+<ul>
+<li><p>Dial koneksi ke Indihome menggunakan PPPoE (bridge mode)</p></li>
+
+<li><p>DHCP Server</p></li>
+
+<li><p>Masquerade NAT</p></li>
+
+<li><p>Hotspot</p></li>
+
+<li><p>Pembatasan kecepatan menggunakan Queue Tree dan Mangle</p></li>
+</ul>
+
+<p>Selain itu di titik pusat juga ada UPS sebagai penyuplai daya ketika terjadi mati listrik.
+Kemudian alat yang berada di setiap rumah yaitu :</p>
+
+<ul>
+<li><p>Wireless Router yang disetting sebagai Access Point Mode</p></li>
+
+<li><p>Kabel UTP</p></li>
+
+<li><p>Switch <em>(optional)</em></p></li>
+</ul>
+
+<p>Panjang kabel UTP menyesuaikan dengan jarak rumah satu dengan lainnya. Rata-rata kebutuhan kabel
+UTP adalah 40 meter tiap rumah. Khusus untuk menghubungkan rumah tertentu menggunakan Fiber Optic
+yang mana dijadikan sebagai backbone. Karena RB450gx4 dan Wireless Router yang digunakan
+belum support port FO sehingga perlu alat tambahan berupa HTB FO.</p>
+
+<p>Berikut kondisi titik utama di mana terdapat Router dari Indihome, Mikrotik RB450gx4 dan
+HTB FO :</p>
+
+<p><img src="/img/titik-utama.jpg" alt="Titik Utama" /></p>
+
+<h5 id="kebutuhan-dana">Kebutuhan Dana</h5>
+
+<p>Untuk membeli berbagai peralatan di atas, maka diadakan sistem iuran wajib 100ribu/rumah.
+Secara garis besar berikut kebutuhan dana instalasi awal RT/RW Net di Beran :</p>
+
+<p><img src="/img/pengeluaran-titik-utama.png" alt="Pengeluaran Titik Utama" /></p>
+
+<p>Karena dari rincian dana di atas hasilnya <em>minus</em> sehingga untuk sementara bisa ditalangi
+menggunakan dana kas pemuda Beran. Kemudian untuk kebutuhan dana di setiap rumah seperti
+berikut :</p>
+
+<p><img src="/img/kebutuhan-dana-rumah.png" alt="Kebutuhan Dana Setiap Rumah" /></p>
+
+<p>Daftar di atas merupakan kebutuhan dana untuk rumah yang sebelumnya tidak berlangganan
+internet. Artinya butuh alat berupa Switch, Router dan kabel UTP. Untuk kabel UTP dihitung
+2ribu per meter. Dan berikut salah satu moment yang terabadikan ketika setting
+Wireless Router sebagai Access Point mode :</p>
+
+<p><img src="/img/instalasi-internet-awal.jpg" alt="Instalasi Internet Awal" /></p>
+
+<h5 id="monitoring-jaringan">Monitoring Jaringan</h5>
+
+<p>Setelah instalasi dan konfigurasi selesai, selanjutnya perlu memikirkan mekanisme
+monitoring jaringan. Hal ini karena RT/RW Net yang dibangun bisa dikatakan tidak memenuhi
+standart, terutama penggunaan kabel. Kabel UTP yang harusnya digunakan di indoor kami
+gunakan di outdoor yang bahkan rawan tertimpa pohon.</p>
+
+<p><a href="https://mikrotik.com/thedude" target="_blank">The Dude</a> merupakan package yang dari Mikrotik untuk
+melakukan berbagai macam kebutuhan monitoring. Untuk RT/RW Net Beran, saya hanya akan
+menggunakan The Dude untuk memonitoring ping ke semua Router.</p>
+
+<p>Skenarionya mikrotik secara berkala melakukan ping ke semua Router, jika ada router yang
+status ping-nya timemout maka akan mengirimkan notifikasi ke grup telegram.</p>
+
+<p><img src="/img/notifikasi-the-dude-telegram.jpg" alt="Notifikasi The Dude Telegram" /></p>
+
+<p>Nah, grup telegram di atas berisi beberapa orang yang ditugasi sebagai teknisi. Ketika ada
+notifikasi maka teknisi yang available akan segera mengecek ke lokasi.
+Karena RT/RW Net ini bersifat swadaya, jadi tidak ada bayaran apapun untuk teknisi :)</p>
+
+<p>Gambaran monitoring Wireless Router menggunakan The Dude :</p>
+
+<p><img src="/img/the-dude.jpg" alt="The Dude Topologi" /></p>
+
+<h5 id="jualan-voucher-hotspot">Jualan Voucher Hotspot</h5>
+
+<p>Secara keseluruhan jumlah rumah di Beran sekitar 50 rumah padahal yang berlangganan RT/RW
+NET hanya 28 rumah. Artinya masih ada lebih dari 20 rumah yang tidak berlangganan. Karena
+RT/RW Net ini bersifat swadaya akhirnya diputuskan untuk menjual voucher.</p>
+
+<p>Harapannya dengan adanya voucher ini, warga yang tidak berlangganan pun dapat menikmati koneksi
+internet yang stabil dengan harga murah. Terutama warga yang memiliki anak sekolah.
+Voucher dijual dengan harga 10ribu dengan kuota 5 GB.</p>
+
+<p><img src="/img/voucher-hotspot.jpg" alt="Voucher Hotspot" /></p>
+
+<p>Voucher di atas di-<em>generate</em> menggunakan <a href="https://mikhmon.online/" target="_blank">Mikhmon</a>, yaitu sebuah
+aplikasi untuk mengelola hotspot vocuher. Alasan saya lebih memilih <strong>Mikhmon</strong>
+dibanding <strong>Userman</strong> (paket bawaan dari Mikrotik untuk mengelola hotspot voucher) adalah :</p>
+
+<ul>
+<li><p>Mikhmon lebih ringan dibanding Userman</p></li>
+
+<li><p>Mikhmon tidak perlu aktif selama 24 jam, karena bukan radius server seperti Userman yang
+harus aktif 24 jam</p></li>
+
+<li><p>Kemudahan konfigurasi Mikhmon</p></li>
+</ul>
+
+<h5 id="kendala">Kendala</h5>
+
+<h6 id="1-internet-indihome-ber-fup">1. Internet Indihome Ber-FUP</h6>
+
+<p>Sudah menjadi rahasia umum bahwa internet Indihome yang katanya <em>unlimited</em> ternyata
+ber-FUP. FUP (Fair Usage Policy) adalah kebijakan batasan pemakaian internet yang
+disediakan oleh provider penyedia layanan internet. Mudahnya jika pemakaian internet sudah
+mencapai sekian GB maka kecepatan internet diturunkan.</p>
+
+<p>Untuk kasus RT/RW Net Beran yang berkecepatan 100 Mbps, jika pemakaian sudah melebihi 2000
+GB maka kecepatan diturunkan menjadi 20 Mbps. Ini menjadi masalah karena secara rata-rata
+penggunaan RT/RW Net Beran mencapai 30-40 Mbps. Dan baru tanggal 15 saja penggunaan sudah
+melebihi 2000 GB, terutama masa pandemi seperti ini.</p>
+
+<p><img src="/img/beran-network-avg.jpg" alt="Beran Network Average" /></p>
+
+<p>Solusinya setiap rumah diberikan kuota 100 GB. Setelah melebihi kuota maka kecepatan akan
+diturunkan menjadi 256 kbps. Hal ini dilakukan untuk menjaga RT/RW Net yang sifatnya
+swadaya tetap adil. Karena secara pola pemakaian setiap rumah berbeda.</p>
+
+<p>Kemudian bagi rumah yang penggunaannya telah diturunkan menjadi 256 kbps, ada opsi untuk
+membeli voucher hotspot. Dan penjualan voucher ini berfungsi untuk menambah uang kas.</p>
+
+<p>Karena permasalahan FUP di atas, ada 6 rumah yang melepaskan diri dari RT/RW Net Beran
+karena kurang setuju dengan sistem kuota. Ya inilah yang dinamakan lika liku menjalankan
+RT/RW Net secara swadaya.</p>
+
+<h6 id="2-sidak-dari-telkom">2. Sidak dari Telkom</h6>
+
+<p>Setelah selesai dengan permasalahan FUP, sekitar bulan Juni pihak telkom secara mendadak
+melakukan sidak terhadap pelanggan yang menggunakan kecepatan di atas 50 Mbps. Alasannya
+koneksi Indihome tidak boleh dishare ke rumah lain. Menurut telkom ini termasuk tindakan
+illegal.</p>
+
+<p>Kemudian pihak telkom memberikan 3 pilihan :</p>
+
+<ul>
+<li><p>Kecepatan internet diturunkan menjadi 20 Mbps</p></li>
+
+<li><p>Kecepatan internet diturunkan menjadi 10 Mbps</p></li>
+
+<li><p>Internet Indihome diputus secara total</p></li>
+</ul>
+
+<p>Jika tidak memilih salah satu dari 3 pilihan di atas, maka pihak Telkom mengancam akan
+di bawa ke ranah hukum. Berikut surat perjanjian dengan pihak telkom :</p>
+
+<p><img src="/img/surat-telkom.png" alt="Surat Telkom" /></p>
+
+<p>Akhirnya kami memilih untuk menurunkan kecepatan menjadi 20 Mbps. Konsekuensinya kecepatan
+masing-masing rumah diturunkan menjadi 1 Mbps. Ini dilakukan demi keadilan dan juga FUP
+kecepatan 20 Mbps hanya 600 GB</p>
+
+<h6 id="3-tambah-upstream-telkom-wms">3. Tambah Upstream : Telkom WMS</h6>
+
+<p>Dampak dari penurunan kecepatan Indihome menjadi 20 Mbps, maka kami harus menambah koneksi
+baru. Pilihan yang paling mudah dengan menambah koneksi dari Indihome dengan kecepatan 20
+Mbps juga. Tapi pertimbangannya jika menggunakan Indihome lagi maka akan bermasalah dengan
+FUP.</p>
+
+<p>Setelah tanya sana-sini akhirnya pilihan jatuh kepada Telkom WMS. WMS (Wifi Managed
+Service) merupakan layanan wifi dari telkom yang terdiri dari 3 ssid (@wifi.id,
+seamless@wifi.id dan ssid venue).</p>
+
+<p>Dengan menggunakan WMS maka tidak perlu memikirkan FUP dan secara harga juga lebih murah.
+WMS dengan kecepatan 20 Mbps harganya sekitar 300 ribu. Kemudian karena WMS berbasis
+wireless sehingga perlu tambahan alat. Akhirnya kami membeli <strong>Mikrotik RB952ac</strong> yang
+bisa support wifi dengan frekuensi 2,4 GHz dan 5 GHz.</p>
+
+<p>Sehingga saat ini RT/RW Net Beran memiliki 2 sumber internet dengan pembagian :</p>
+
+<ul>
+<li><p>Indihome khusus untuk trafik Youtube</p></li>
+
+<li><p>WMS untuk semua trafik kecuali Youtube</p></li>
+</ul>
+
+<p>Dengan skenario seperti di atas, setiap rumah bisa mendapatkan kecepatan 3 Mbps dan tanpa
+kuota.</p>
+
+<h5 id="rt-rw-net-illegal">RT/RW Net Illegal?</h5>
+
+<p>Untuk menghindari label RT/RW Net Illegal, harapannya ke depan kami bisa membeli koneksi
+internet dari ISP sehingga ada perijinan. Dan juga dalam waktu dekat akan ada pembagunan
+jalan tol yang mana berpotensi mengganggu jalur Fiber Optic dari telkom, sehingga ada
+kemungkinan kami tidak bisa lagi berlangganan Indihome/WMS.</p>
+
+<h5 id="dibalik-layar-rt-rw-net-beran">Dibalik Layar RT/RW Net Beran</h5>
+
+<p><img src="/img/beran-squad.jpg" alt="Beran Squad" /></p>
+
+<p>Foto diambil tahun 2018 di Pantai Cemara Sewu</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/networking/'>Networking</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/mikrotik/'>Mikrotik</a>, <a class='tag' href='/tags/rtrwnet/'>RTRWNet</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/posts/monitoring-jaringan-tanpa-the-dude/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Monitoring Jaringan Tanpa the Dude</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/posts/konsumsi-data-selama-pembelajaran-jarak-jauh/'>
+        <span class='screen-reader-text'>Next post: </span>Konsumsi Data Selama Pembelajaran Jarak Jauh<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "herusetiawan-id" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/herusetiawan.id' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:me.herusetiawan@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://t.me/therusetiawan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Telegram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="m 22.05,1.577 c -0.393,-0.016 -0.784,0.08 -1.117,0.235 -0.484,0.186 -4.92,1.902 -9.41,3.64 C 9.263,6.325 7.005,7.198 5.267,7.867 3.53,8.537 2.222,9.035 2.153,9.059 c -0.46,0.16 -1.082,0.362 -1.61,0.984 -0.79581202,1.058365 0.21077405,1.964825 1.004,2.499 1.76,0.564 3.58,1.102 5.087,1.608 0.556,1.96 1.09,3.927 1.618,5.89 0.174,0.394 0.553,0.54 0.944,0.544 l -0.002,0.02 c 0,0 0.307,0.03 0.606,-0.042 0.3,-0.07 0.677,-0.244 1.02,-0.565 0.377,-0.354 1.4,-1.36 1.98,-1.928 l 4.37,3.226 0.035,0.02 c 0,0 0.484,0.34 1.192,0.388 0.354,0.024 0.82,-0.044 1.22,-0.337 0.403,-0.294 0.67,-0.767 0.795,-1.307 0.374,-1.63 2.853,-13.427 3.276,-15.38 L 23.676,4.725 C 23.972,3.625 23.863,2.617 23.18,2.02 22.838,1.723 22.444,1.593 22.05,1.576 Z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.youtube.com/channel/UCz2kPuasq463KQZrAZclKMw' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Youtube account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2024 Heru Setiawan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wireless on Heru Setiawan</title>
+    <link>https://herusetiawan.id/tags/wireless/</link>
+    <description>Recent content in Wireless on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 30 Nov 2021 21:23:23 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/tags/wireless/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Potensi Pemanfaatan Bluetooth Low Energy Beacon Untuk Advertisement</title>
+      <link>https://herusetiawan.id/posts/potensi-pemanfaatan-bluetooth-low-energy-beacon-untuk-advertisement/</link>
+      <pubDate>Tue, 30 Nov 2021 21:23:23 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/potensi-pemanfaatan-bluetooth-low-energy-beacon-untuk-advertisement/</guid>
+      <description>Saat ini intensitas penggunaan perangkat elektronik dalam kehidupan manusia sangat tinggi. Sebagai contoh di pagi hari adanya rutinitas menonton televisi, saat bepergian menggunakan jam tangan tipe smartwatch, hingga di kantor melakukan aktivitas pencetakan dokumen menggunakan printer. Perangkat-perangkat tersebut dapat saling terkoneksi dan dapat dikontrol dari perangkat lain sehingga mampu memudahkan kehidupan manusia. Dengan adanya kemajuan teknologi maka perangkat yang dulunya terkoneksi menggunakan kabel berganti menjadi terkoneksi dengan nirkabel.
+Salah satu standar yang digunakan untuk mengkoneksikan perangkat melalui jalur nirkabel yaitu Wireless Personal Area Network (WPAN) yang berbasiskan pada IEEE 802.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RTRWNet on Heru Setiawan</title>
+    <link>https://herusetiawan.id/tags/rtrwnet/</link>
+    <description>Recent content in RTRWNet on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Sep 2020 09:06:23 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/tags/rtrwnet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lesson Learned : Membangun RT/RW Net Secara Swadaya</title>
+      <link>https://herusetiawan.id/posts/lesson-learned-membangun-rt-rw-net-secara-swadaya/</link>
+      <pubDate>Mon, 21 Sep 2020 09:06:23 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/lesson-learned-membangun-rt-rw-net-secara-swadaya/</guid>
+      <description>Saat ini kebutuhan akan koneksi internet sangatlah tinggi. Terutama di masa pandemi yang mana segala aktivitas disarankan untuk dilakukan secara online. Beruntung di awal tahun 2020 kawasan rumah saya (re : Beran) telah dijangkau oleh jaringan Indihome.
+Sebelum dijangkau jaringan Indihome, warga Beran telah berlangganan internet di salah satu warga. Warga ini punya tower sehingga bisa mengambil koneksi internet (Indihome) dari tempat lain. Secara harga juga relatif murah, hanya 65ribu/bulan dengan kecepatan 1 Mbps unlimited.</description>
+    </item>
+    
+  </channel>
+</rss>

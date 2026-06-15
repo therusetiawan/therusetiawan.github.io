@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal on Heru Setiawan</title>
+    <link>https://herusetiawan.id/tags/terminal/</link>
+    <description>Recent content in Terminal on Heru Setiawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 01 Jan 2021 08:23:15 +0700</lastBuildDate>
+    
+	<atom:link href="https://herusetiawan.id/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Save Tmux Session</title>
+      <link>https://herusetiawan.id/posts/how-to-save-tmux-session/</link>
+      <pubDate>Fri, 01 Jan 2021 08:23:15 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/how-to-save-tmux-session/</guid>
+      <description>Hi folks,
+When you start using tmux, it will always create a new session. We can say that session is tmux main feature. Session can contains multiple windows and panes. It depend on your needed.
+The interesting thing is you can create multiple tmux sessions. Usually, every session only related to one project. For example you have 2 tmux session. The first is “laravel” session contains 2 panes. First pane is used to open vim editor and the second pane is used to run the laravel app.</description>
+    </item>
+    
+    <item>
+      <title>How to Deal With Tmux Session</title>
+      <link>https://herusetiawan.id/posts/how-to-deal-with-tmux-session/</link>
+      <pubDate>Sat, 29 Sep 2018 19:04:46 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/how-to-deal-with-tmux-session/</guid>
+      <description>Hi folks,
+When you start using tmux, a new session will always appear. We can say that a session is tmux main feature. A session can contain multiple windows and panes. It depend on your need.
+The interesting thing is you can create multiple tmux sessions. Usually, every session only related to one project. For example you have 2 tmux sessions. Session “laravel” contains 2 panes. The first pane is used to open vim editor and the second pane is used to run the laravel app.</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Tmux</title>
+      <link>https://herusetiawan.id/posts/an-introduction-to-tmux/</link>
+      <pubDate>Fri, 21 Sep 2018 21:38:29 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/an-introduction-to-tmux/</guid>
+      <description>What is Tmux? Tmux is a terminal multiplexer. It&amp;rsquo;s allow you to open multiple terminal sessions inside a single terminal window and easily switching between them. Tmux also allow you to split terminal into multiple windows. Means, you don&amp;rsquo;t need to open multiple tabs in terminal when you have multiple task. Trust me, tmux is very effective and will save your time!
+Session, Window and Pane When you use tmux, terminal tab is definitely deprecated.</description>
+    </item>
+    
+    <item>
+      <title>Memulai Petualangan Menggunakan Vim (Part 2)</title>
+      <link>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-2/</link>
+      <pubDate>Mon, 15 Jan 2018 20:53:23 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-2/</guid>
+      <description>Halo, kembali lagi bertemu dengan post yang mengupas tentang VIM. Post ini merupakan lanjutan dari Memulai Petualangan Menggunakan VIM (Part 1). Kali ini saya akan bercerita step by step untuk bisa mahir menggunakan VIM. Ya belajar menggunakan VIM memang berat di awal dan butuh banyak waktu. Maka dari itu jangan berharap bisa mahir dalam hitungan hari atau bahkan jam. Perlu latihan berulang-ulang agar jari-jari anda terbiasa dengan perintah di VIM.</description>
+    </item>
+    
+    <item>
+      <title>Memulai Petualangan Menggunakan Vim Part 1</title>
+      <link>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-1/</link>
+      <pubDate>Sun, 10 Dec 2017 10:51:40 +0700</pubDate>
+      
+      <guid>https://herusetiawan.id/posts/memulai-petualangan-menggunakan-vim-part-1/</guid>
+      <description>Yeah, salah satu resolusi terbesar saya di tahun 2017 adalah berhasil menjadikan VIM sebagai text editor utama. Yang jelas butuh perjuangan dan kerja keras untuk mencapai hal tersebut. Waktu yang saya butuhkan untuk benar-benar full menggunakan VIM sektiar 4 bulan. Salah satu hal yang membuat saya perpacu untuk belajar VIM yaitu quote dari sebuah blog dengan judul Learn VIM Progressively.
+ Learn VIM and it will be your last text editor.</description>
+    </item>
+    
+  </channel>
+</rss>
